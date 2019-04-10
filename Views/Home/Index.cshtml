@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>React</h1>
+    <p class="lead">Welcome to this app. You can create a customer, add products, use different stores using this app.</p>
+    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Customers", "Index", "Customers")</h2>
+        <p>
+            Create your customer account, edit or delete customer account and get information about our Customers.
+        </p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Products", "Index", "Products")</h2>
+        <p>Add new products, edit existing products on the list and delete unnecessary products from the Store. You can get the information about the products here.</p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Sales", "Index", "Sales")</h2>
+        <p>Create, edit or delete Sales here. Or, get more info about the sales.</p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Store", "Index", "Stores")</h2>
+        <p>Create, edit or delete Store. Or, get more info about the Store</p>
+        
+    </div>
+</div>

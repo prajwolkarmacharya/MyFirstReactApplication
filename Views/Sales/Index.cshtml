@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ReactApplication.Models.Sale>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br/>
+
+<p>
+    @Html.ActionLink("New Sales", "Create", "SalesController", new { @class = "btn btn-primary" })
+</p>
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateSold)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Store.Name)
+        </th>
+        <th>Actions</th>
+        <th>Actions</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateSold)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Store.Name)
+        </td>
+        <td>
+            @Html.ActionLink(" EDIT", "Edit", new { id = item.Id}, new{@class = "btn btn-warning glyphicon glyphicon-edit" })
+           
+        </td>
+        <td>
+            
+            @Html.ActionLink(" DELETE", "Delete", new { id = item.Id }, new{@class = "btn btn-danger glyphicon glyphicon-trash" })
+        </td>
+    </tr>
+}
+
+</table>
